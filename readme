@@ -1,0 +1,91 @@
+For the HTML
+
+This code is a basic HTML code for a Tic Tac Toe game.
+
+The code starts with the declaration <!DOCTYPE html>, which specifies the version of HTML that the code is written in.
+
+Next, the <html> tag is used to define the start of the HTML document, and the lang="en" attribute specifies the language of the document, which is English in this case.
+
+The <head> section of the code includes information about the document, such as the character encoding used (UTF-8), the viewport setting for the website, and a title for the document. The <link rel="stylesheet" href="style.css"> tag links the HTML document to a CSS stylesheet, while the <script src="./main.js"></script> tag links it to a JavaScript file that provides the game logic.
+
+The <body> section contains the content of the HTML document, which in this case is a Tic Tac Toe game. There are various sections within the <body> section that define different parts of the game, such as the title, the player display, the game grid, and the controls for resetting the game.
+
+The <main class="background"> tag defines the main content of the HTML document and sets the background color of the game through the use of a CSS class.
+
+The <section class="title"> tag defines a section for the title of the game, and the <h1> tag sets the text of the title.
+
+The <section class="display"> tag defines a section for displaying the current player's turn, and the <span class="display-player playerX">X</span> tag sets the initial player to "X".
+
+The <section class="container"> tag defines a section for the game grid, which is made up of nine <div class="tile"></div> tags, each representing a single space in the game.
+
+The <section class="display announcer hide"></section> tag defines a section for announcing the winner of the game, and the hide class is used to initially hide this section.
+
+Finally, the <section class="controls"> tag defines a section for the game controls, and the <button id="reset">Reset</button> tag provides a button for resetting the game.
+
+At the end of the code, a message crediting the author of the game is displayed using a <p> tag.
+
+
+
+
+    For CSS
+
+    This is a CSS code for a Tic Tac Toe game. The code defines the styles for different elements on the HTML page.
+
+The first line of code sets the padding and margin values to 0, and sets the font-family property to "Segoe UI".
+
+The ".background" class sets the background color of the page to #bcc8c8, sets the height of the page to 100% of the viewport height, and sets a top padding of 1px.
+
+The ".title" class sets the text color to white, centers the text, sets the font size to 40px, and sets a margin-top of 10%.
+
+The ".display" class sets the text color to white, sets the font size to 25px, centers the text, and sets a margin-top and margin-bottom of 1em. The ".hide" class sets the display property to "none", which will hide the element from view.
+
+The ".container" class sets a margin of 0 auto to center the grid, sets the display property to "grid", defines the grid-template-columns and grid-template-rows properties to create a 3x3 grid, and sets a maximum width of 300px.
+
+The ".tile" class sets the border of the tile to 1px solid white, sets the minimum width and height of the tile to 100px, sets the display property to "flex", centers the contents of the tile both horizontally and vertically, sets the font size to 50px, and sets the cursor style to "pointer".
+
+The ".playerX" class sets the color of text in the span to a red color, while the ".playerO" class sets the color to a purple color.
+
+The ".controls" class sets the display property to "flex", sets the flex-direction to "row", centers the contents, and sets a margin-top of 1em.
+
+The "#reset" id sets the background color to a pink color, sets the text color to white, sets the padding and border-radius properties to create rounded corners, sets the font size to 20px, sets a margin-left of 1em, and sets the cursor style to "pointer".
+
+
+
+For JavaScript
+
+Innertext represents the rendered text content of a node and its desendants
+The code is a JavaScript implementation of the Tic Tac Toe game. The game is created using the DOM API, which allows manipulation of the HTML structure of a web page.
+
+The code starts by listening to the "DOMContentLoaded" event, which fires when the document has been completely loaded and parsed. Inside the event listener, the code defines various variables and functions that are used in the game.
+
+The variables include:
+
+tiles: an array that contains all the tiles (boxes) in the game.
+playerDisplay: a reference to the element that displays the current player.
+resetButton: a reference to the reset button.
+announcer: a reference to the element that displays the result of the game (who won or if it was a tie).
+board: an array that keeps track of the state of each tile (whether it's X, O or empty).
+currentPlayer: a string that keeps track of the current player, either "X" or "O".
+isGameActive: a boolean that determines if the game is active or not.
+The code defines three constant values:
+
+PLAYERX_WON: a string that represents the situation when player X has won.
+PLAYERO_WON: a string that represents the situation when player O has won.
+TIE: a string that represents a tie game.
+The code then defines an array called winningConditions which represents all the possible winning combinations in the game.
+
+The handleResultValidation function checks if either player has won or if it's a tie by looping through each of the winning conditions and comparing the state of the tiles at the indices in the winning condition. If a winning condition is met, the game is declared over and the appropriate result is displayed.
+
+The announce function takes the result of the game and displays it to the user.
+
+The isValidAction function checks if a tile is already filled and returns false if it is, otherwise it returns true.
+
+The updateBoard function updates the state of the board after a player has made a move.
+
+The changePlayer function changes the current player.
+
+The userAction function is called when a user clicks on a tile. It performs various checks to see if the game is still active and the tile is valid, and then updates the state of the tile and the board.
+
+The resetBoard function resets the game board and all variables back to their initial state.
+
+Finally, the code adds event listeners to each tile and the reset button. When a tile is clicked, the userAction function is called, and when the reset button is clicked, the resetBoard function is called.
