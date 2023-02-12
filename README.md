@@ -35,9 +35,9 @@ At the end of the code, a message crediting the author of the game is displayed 
 
 
 
-    For CSS
+   For CSS
 
-    This is a CSS code for a Tic Tac Toe game. The code defines the styles for different elements on the HTML page.
+ This is a CSS code for a Tic Tac Toe game. The code defines the styles for different elements on the HTML page.
 
 The first line of code sets the padding and margin values to 0, and sets the font-family property to "Segoe UI".
 
