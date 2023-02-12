@@ -9,13 +9,16 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
+    <!-- container of our game -->
     <main class="background">
         <section class="title">
             <h1>Tic Tac Toe Game</h1>
         </section>
+        <!-- where our players will see who is next -->
         <section class="display">
             Player <span class="display-player playerX">X</span>'s turn
         </section>
+        <!-- this is our game grid -->
         <section class="container">
             <div class="tile"></div>
             <div class="tile"></div>
@@ -27,11 +30,14 @@
             <div class="tile"></div>
             <div class="tile"></div>
         </section>
+        <!-- we announce our end game state -->
         <section class="display announcer hide"></section>
+        <!-- this is a control reset button  -->
         <section class="controls">
             <button id="reset">Reset</button>
         </section>
+
+        <p style="text-align: center;font-size: 25px;color: midnightblue;"> Crafted by Allen Kileo</p>
     </main>
-    <p style="text-align: center;font-size: 25px;color: midnightblue;"> Crafted by Allen Kileo</p>
 </body>
 </html>
