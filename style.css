@@ -1,3 +1,4 @@
+/* remove browser defined margin and padding */
 *{
     padding:0;
     margin: 0;
@@ -7,7 +8,7 @@
 .background{
     background-color: #bcc8c8;
     height: 100vh;
-    padding-top: 1px;
+    padding-top: 1px; /**1px padding top to avoid margin collapse */
 }
 .title{
     color: #fff;
@@ -22,15 +23,20 @@
     margin-top: 1em;
     margin-bottom: 1em;
 }
+/* this will allow us to hide any UI elements of the page */
 .hide{
     display: none;
 }
+/* this will create our game grid */
 .container{
     margin: 0 auto;
     display: grid;
     grid-template-columns:33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
+    /* we have used equal gtc and gtr in order to create 3 equal columns and rows
+    and auto margin to center it horizontally
+    */
 }
 .tile{
     border: 1px solid white;
@@ -40,8 +46,9 @@
     justify-content: center;
     align-items: center;
     font-size:50px;
-    cursor: pointer;
+    cursor: pointer;  /*the cursor pointer shows that this element is clickable just like a link*/
 }
+/* color UI elements based on our player */
 .playerX{
     color: rgb(233, 41, 60);
 }
@@ -54,6 +61,7 @@
     justify-content: center;
     margin-top: 1em;
 }
+/* this is used to style the reset button */
 #reset{
     background-color: #ff3860;
     color: #fff;
